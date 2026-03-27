@@ -1,5 +1,6 @@
 import { Phone, MessageCircle, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoFull from "@/assets/logo-full.png";
 
 const WHATSAPP_URL = "https://wa.me/27123456789?text=Hi%20Bakone%20Pharmacy%2C%20I'd%20like%20to%20enquire%20about%20your%20services.";
 
@@ -16,6 +17,7 @@ const Index = () => (
     {/* Hero */}
     <section className="bg-secondary py-20 md:py-28">
       <div className="container mx-auto px-4 text-center">
+        <img src={logoFull} alt="Bakone Pharmacy" className="mx-auto mb-8 h-28 md:h-36" />
         <h1 className="mx-auto max-w-2xl text-4xl font-bold leading-tight md:text-5xl">
           Your trusted local pharmacy in Johannesburg
         </h1>
