@@ -17,6 +17,7 @@ const Index = () => (
     {/* Hero */}
     <section className="bg-secondary py-20 md:py-28">
       <div className="container mx-auto px-4 text-center">
+        <img src={logoFull} alt="Bakone Pharmacy" className="mx-auto mb-8 h-28 md:h-36" />
         <h1 className="mx-auto max-w-2xl text-4xl font-bold leading-tight md:text-5xl">
           Your trusted local pharmacy in Johannesburg
         </h1>
