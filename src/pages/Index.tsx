@@ -1,6 +1,7 @@
 import { Phone, MessageCircle, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoFull from "@/assets/logo-full.png";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const WHATSAPP_URL = "https://wa.me/27123456789?text=Hi%20Bakone%20Pharmacy%2C%20I'd%20like%20to%20enquire%20about%20your%20services.";
 
@@ -15,27 +16,34 @@ const offerings = [
 const Index = () => (
   <>
     {/* Hero */}
-    <section className="bg-secondary py-20 md:py-28">
-      <div className="container mx-auto px-4 text-center">
-        <img src={logoFull} alt="Bakone Pharmacy" className="mx-auto mb-8 h-40 md:h-52" />
-        <h1 className="mx-auto max-w-2xl text-4xl font-bold leading-tight md:text-5xl">
-          Your trusted local pharmacy in Johannesburg
-        </h1>
-        <p className="mx-auto mt-5 max-w-xl text-lg text-muted-foreground">
+    <section
+      className="relative flex min-h-[85vh] items-center justify-center overflow-hidden"
+      style={{ backgroundImage: `url(${heroBg})`, backgroundSize: "cover", backgroundPosition: "center" }}
+    >
+      <div className="absolute inset-0 bg-green-dark/40" />
+      <div className="relative z-10 container mx-auto px-4 text-center">
+        <img
+          src={logoFull}
+          alt="Bakone Pharmacy"
+          className="mx-auto h-56 md:h-72 lg:h-80 animate-scale-in drop-shadow-2xl"
+          width={600}
+          height={400}
+        />
+        <p className="mx-auto mt-6 max-w-xl text-lg text-primary-foreground/90 animate-fade-in-up opacity-0" style={{ animationDelay: "0.3s" }}>
           Professional pharmaceutical care with a personal touch. We're here to help you and your family stay healthy, every day.
         </p>
-        <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+        <div className="mt-8 flex flex-wrap justify-center gap-4 animate-fade-in-up opacity-0" style={{ animationDelay: "0.6s" }}>
+          <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg">
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
               <MessageCircle size={18} className="mr-2" /> Chat on WhatsApp
             </a>
           </Button>
-          <Button asChild size="lg" variant="outline">
+          <Button asChild size="lg" className="border-primary-foreground/50 bg-primary-foreground/10 text-primary-foreground backdrop-blur-sm hover:bg-primary-foreground/20">
             <a href="tel:+27123456789">
               <Phone size={18} className="mr-2" /> Call Now
             </a>
           </Button>
-          <Button asChild size="lg" variant="outline">
+          <Button asChild size="lg" className="border-primary-foreground/50 bg-primary-foreground/10 text-primary-foreground backdrop-blur-sm hover:bg-primary-foreground/20">
             <a href="https://maps.google.com/?q=Bakone+Pharmacy+Johannesburg" target="_blank" rel="noopener noreferrer">
               <MapPin size={18} className="mr-2" /> Get Directions
             </a>
@@ -53,13 +61,17 @@ const Index = () => (
         </p>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {offerings.map((item) => (
-            <div key={item.title} className="flex flex-col justify-between rounded-lg border border-gold/30 bg-gold/10 p-6 transition-shadow hover:shadow-md hover:shadow-gold/10">
+          {offerings.map((item, i) => (
+            <div
+              key={item.title}
+              className="flex flex-col justify-between rounded-lg border border-gold/30 bg-gold/10 p-6 transition-all duration-300 hover:shadow-lg hover:shadow-gold/15 hover:-translate-y-1 animate-fade-in-up opacity-0"
+              style={{ animationDelay: `${0.1 * i}s` }}
+            >
               <div>
                 <h3 className="text-lg font-semibold">{item.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{item.desc}</p>
               </div>
-              <Button asChild variant="outline" size="sm" className="mt-5 self-start border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+              <Button asChild variant="outline" size="sm" className="mt-5 self-start border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors">
                 <a href={`https://wa.me/27123456789?text=Hi%2C%20I'd%20like%20to%20ask%20about%20${encodeURIComponent(item.title)}`} target="_blank" rel="noopener noreferrer">
                   <MessageCircle size={14} className="mr-1.5" /> Ask on WhatsApp
                 </a>
