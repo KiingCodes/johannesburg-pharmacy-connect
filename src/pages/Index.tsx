@@ -17,7 +17,7 @@ const Index = () => (
     {/* Hero */}
     <section className="bg-secondary py-20 md:py-28">
       <div className="container mx-auto px-4 text-center">
-        <img src={logoFull} alt="Bakone Pharmacy" className="mx-auto mb-8 h-28 md:h-36" />
+        <img src={logoFull} alt="Bakone Pharmacy" className="mx-auto mb-8 h-40 md:h-52" />
         <h1 className="mx-auto max-w-2xl text-4xl font-bold leading-tight md:text-5xl">
           Your trusted local pharmacy in Johannesburg
         </h1>
@@ -54,7 +54,7 @@ const Index = () => (
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {offerings.map((item) => (
-            <div key={item.title} className="flex flex-col justify-between rounded-lg border bg-card p-6 transition-shadow hover:shadow-md">
+            <div key={item.title} className="flex flex-col justify-between rounded-lg border border-gold/30 bg-gold/10 p-6 transition-shadow hover:shadow-md hover:shadow-gold/10">
               <div>
                 <h3 className="text-lg font-semibold">{item.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{item.desc}</p>
