@@ -1,5 +1,6 @@
 import { Phone, MessageCircle, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoFull from "@/assets/logo-full.png";
 
 const WHATSAPP_URL = "https://wa.me/27123456789?text=Hi%20Bakone%20Pharmacy%2C%20I'd%20like%20to%20enquire%20about%20your%20services.";
 
