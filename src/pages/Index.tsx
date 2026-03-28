@@ -15,8 +15,8 @@ const offerings = [
 const Index = () => (
   <>
     {/* Hero */}
-    <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden bg-green-dark">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_hsl(145_40%_20%)_0%,_hsl(150_40%_10%)_100%)]" />
+    <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden bg-background">
+      <div className="absolute inset-0" />
       <div className="relative z-10 container mx-auto px-4 text-center">
         <img
           src={logoFull}
@@ -25,7 +25,7 @@ const Index = () => (
           width={600}
           height={400}
         />
-        <p className="mx-auto mt-6 max-w-xl text-lg text-primary-foreground/90 animate-fade-in-up opacity-0" style={{ animationDelay: "0.3s" }}>
+        <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground animate-fade-in-up opacity-0" style={{ animationDelay: "0.3s" }}>
           Professional pharmaceutical care with a personal touch. We're here to help you and your family stay healthy, every day.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4 animate-fade-in-up opacity-0" style={{ animationDelay: "0.6s" }}>
@@ -34,12 +34,12 @@ const Index = () => (
               <MessageCircle size={18} className="mr-2" /> Chat on WhatsApp
             </a>
           </Button>
-          <Button asChild size="lg" className="border-primary-foreground/50 bg-primary-foreground/10 text-primary-foreground backdrop-blur-sm hover:bg-primary-foreground/20">
+          <Button asChild size="lg" variant="outline">
             <a href="tel:+27123456789">
               <Phone size={18} className="mr-2" /> Call Now
             </a>
           </Button>
-          <Button asChild size="lg" className="border-primary-foreground/50 bg-primary-foreground/10 text-primary-foreground backdrop-blur-sm hover:bg-primary-foreground/20">
+          <Button asChild size="lg" variant="outline">
             <a href="https://maps.google.com/?q=Bakone+Pharmacy+Johannesburg" target="_blank" rel="noopener noreferrer">
               <MapPin size={18} className="mr-2" /> Get Directions
             </a>
