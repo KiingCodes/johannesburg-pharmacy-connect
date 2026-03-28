@@ -1,7 +1,6 @@
 import { Phone, MessageCircle, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoFull from "@/assets/logo-full.png";
-import heroBg from "@/assets/hero-bg.jpg";
 
 const WHATSAPP_URL = "https://wa.me/27123456789?text=Hi%20Bakone%20Pharmacy%2C%20I'd%20like%20to%20enquire%20about%20your%20services.";
 
@@ -16,11 +15,8 @@ const offerings = [
 const Index = () => (
   <>
     {/* Hero */}
-    <section
-      className="relative flex min-h-[85vh] items-center justify-center overflow-hidden"
-      style={{ backgroundImage: `url(${heroBg})`, backgroundSize: "cover", backgroundPosition: "center" }}
-    >
-      <div className="absolute inset-0 bg-green-dark/40" />
+    <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden bg-green-dark">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_hsl(145_40%_20%)_0%,_hsl(150_40%_10%)_100%)]" />
       <div className="relative z-10 container mx-auto px-4 text-center">
         <img
           src={logoFull}
