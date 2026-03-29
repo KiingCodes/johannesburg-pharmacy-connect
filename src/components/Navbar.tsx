@@ -1,38 +1,41 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logoFull from "@/assets/logo-full.png";
 
 const links = [
-  { to: "/", label: "Home" },
-  { to: "/services", label: "Services" },
-  { to: "/about", label: "About" },
-  { to: "/contact", label: "Contact" },
+  { to: "#home", label: "Home" },
+  { to: "#offerings", label: "What We Offer" },
+  { to: "#services", label: "Services" },
+  { to: "#about", label: "About" },
+  { to: "#contact", label: "Contact" },
 ];
+
+const scrollTo = (id: string) => {
+  const el = document.querySelector(id);
+  el?.scrollIntoView({ behavior: "smooth" });
+};
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const { pathname } = useLocation();
 
   return (
     <nav className="sticky top-0 z-50 border-b bg-card/80 backdrop-blur-md">
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
-        <Link to="/" className="flex-shrink-0">
+        <a href="#home" onClick={() => scrollTo("#home")} className="flex-shrink-0">
           <img src={logoFull} alt="Bakone Pharmacy" className="h-12" />
-        </Link>
+        </a>
 
         {/* Desktop */}
         <ul className="hidden gap-8 md:flex">
           {links.map((l) => (
             <li key={l.to}>
-              <Link
-                to={l.to}
-                className={`text-sm font-medium tracking-wide transition-colors hover:text-primary ${
-                  pathname === l.to ? "text-primary" : "text-muted-foreground"
-                }`}
+              <a
+                href={l.to}
+                onClick={(e) => { e.preventDefault(); scrollTo(l.to); }}
+                className="text-sm font-medium tracking-wide text-muted-foreground transition-colors hover:text-primary"
               >
                 {l.label}
-              </Link>
+              </a>
             </li>
           ))}
         </ul>
@@ -53,15 +56,13 @@ const Navbar = () => {
           <ul className="flex flex-col px-4 py-4">
             {links.map((l) => (
               <li key={l.to}>
-                <Link
-                  to={l.to}
-                  onClick={() => setOpen(false)}
-                  className={`block py-3 text-sm font-medium transition-colors hover:text-primary ${
-                    pathname === l.to ? "text-primary" : "text-muted-foreground"
-                  }`}
+                <a
+                  href={l.to}
+                  onClick={(e) => { e.preventDefault(); setOpen(false); scrollTo(l.to); }}
+                  className="block py-3 text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
                 >
                   {l.label}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>
