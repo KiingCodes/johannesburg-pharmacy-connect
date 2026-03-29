@@ -289,7 +289,7 @@ const Index = () => {
             <div className="scroll-reveal scroll-reveal-up overflow-hidden rounded-lg border" style={{ transitionDelay: "0.3s" }}>
               <iframe
                 title="Bakone Pharmacy Location"
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Amandla+Blvd,+Braamfischerville,+Johannesburg,+1725,+South+Africa&zoom=15"
+                src="https://maps.google.com/maps?q=Amandla+Blvd,+Braamfischerville,+Johannesburg,+1725,+South+Africa&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="400"
                 style={{ border: 0 }}
