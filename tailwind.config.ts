@@ -97,6 +97,11 @@ export default {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-8px)" },
         },
+        "hero-logo": {
+          "0%": { opacity: "0", transform: "scale(0.7) translateY(30px)" },
+          "50%": { opacity: "1", transform: "scale(1.05) translateY(-5px)" },
+          "100%": { opacity: "1", transform: "scale(1) translateY(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -105,6 +110,7 @@ export default {
         "fade-in-up": "fade-in-up 0.7s ease-out forwards",
         "scale-in": "scale-in 0.5s ease-out forwards",
         "float": "float 3s ease-in-out infinite",
+        "hero-logo": "hero-logo 1s cubic-bezier(0.22, 1, 0.36, 1) forwards",
       },
     },
   },

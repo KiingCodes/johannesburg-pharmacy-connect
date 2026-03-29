@@ -1,6 +1,10 @@
 import { Phone, MapPin } from "lucide-react";
 import logoIcon from "@/assets/logo-icon.png";
 
+const scrollTo = (id: string) => {
+  document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
+};
+
 const Footer = () => (
   <footer className="border-t bg-card">
     <div className="container mx-auto px-4 py-10">
@@ -12,9 +16,9 @@ const Footer = () => (
 
         <div className="flex flex-col gap-2 text-sm text-muted-foreground">
           <h4 className="font-display text-base font-semibold text-foreground">Quick Links</h4>
-          <a href="/services" className="hover:text-primary">Services</a>
-          <a href="/about" className="hover:text-primary">About Us</a>
-          <a href="/contact" className="hover:text-primary">Contact</a>
+          <a href="#services" onClick={(e) => { e.preventDefault(); scrollTo("#services"); }} className="hover:text-primary transition-colors">Services</a>
+          <a href="#about" onClick={(e) => { e.preventDefault(); scrollTo("#about"); }} className="hover:text-primary transition-colors">About Us</a>
+          <a href="#contact" onClick={(e) => { e.preventDefault(); scrollTo("#contact"); }} className="hover:text-primary transition-colors">Contact</a>
         </div>
 
         <div className="flex flex-col gap-2 text-sm text-muted-foreground">
