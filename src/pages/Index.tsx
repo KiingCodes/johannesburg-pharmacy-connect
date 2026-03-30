@@ -81,7 +81,10 @@ const Index = () => {
           <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground animate-fade-in-up opacity-0" style={{ animationDelay: "0.5s" }}>
             Professional pharmaceutical care with a personal touch. We're here to help you and your family stay healthy, every day.
           </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4 animate-fade-in-up opacity-0" style={{ animationDelay: "0.8s" }}>
+          <div className="mt-8 animate-fade-in-up opacity-0" style={{ animationDelay: "0.7s" }}>
+            <SmartSearch />
+          </div>
+          <div className="mt-6 flex flex-wrap justify-center gap-4 animate-fade-in-up opacity-0" style={{ animationDelay: "0.9s" }}>
             <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg">
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                 <MessageCircle size={18} className="mr-2" /> Chat on WhatsApp
