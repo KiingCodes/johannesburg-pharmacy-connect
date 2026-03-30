@@ -33,8 +33,8 @@ const Footer = () => (
         <p>© {new Date().getFullYear()} Bakone Pharmacy. All rights reserved.</p>
         <div className="mt-3 flex items-center justify-center gap-2">
           <span>Site managed by</span>
-          <a href="https://jeweliq.co.za" target="_blank" rel="noopener noreferrer" className="inline-flex items-center hover:opacity-80 transition-opacity">
-            <img src={jeweliqLogo} alt="JewelIQ" className="h-8" />
+          <a href="https://www.jeweliq.tech" target="_blank" rel="noopener noreferrer" className="inline-flex items-center hover:opacity-80 transition-opacity">
+            <img src={jeweliqLogo} alt="JewelIQ" className="h-12" />
           </a>
         </div>
       </div>
