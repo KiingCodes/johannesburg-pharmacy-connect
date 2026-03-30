@@ -4,15 +4,17 @@ import { useEffect, useRef } from "react";
 import logoFull from "@/assets/logo-full.png";
 import logoIcon from "@/assets/logo-icon.png";
 import aboutBg from "@/assets/about-bg.jpg";
+import SmartSearch from "@/components/SmartSearch";
 
-const WHATSAPP_URL = "https://wa.me/27123456789?text=Hi%20Bakone%20Pharmacy%2C%20I'd%20like%20to%20enquire%20about%20your%20services.";
+const WHATSAPP_NUMBER = "27839982176";
+const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=Hi%20Bakone%20Pharmacy%2C%20I'd%20like%20to%20enquire%20about%20your%20services.`;
 
 const offerings = [
-  { title: "Cold & Flu Treatment", desc: "Effective remedies and expert advice to help you recover quickly from colds, flu, and seasonal illnesses." },
-  { title: "Pain Relief", desc: "A wide range of pain management solutions for headaches, muscle pain, joint discomfort, and more." },
-  { title: "Vitamins & Immune Support", desc: "Quality supplements and vitamins to boost your immunity and support your overall wellbeing." },
-  { title: "Baby & Child Care", desc: "Trusted products and guidance for your little one's health, from infant care to childhood wellness." },
-  { title: "General Health Products", desc: "Everyday health essentials including skincare, first aid supplies, and personal care items." },
+  { title: "Cold & Flu Treatment", desc: "Effective remedies and expert advice to help you recover quickly from colds, flu, and seasonal illnesses.", wa: "Hi, I have flu symptoms. Can you help?" },
+  { title: "Pain Relief", desc: "A wide range of pain management solutions for headaches, muscle pain, joint discomfort, and more.", wa: "Hi, I'm experiencing pain. What do you recommend for relief?" },
+  { title: "Vitamins & Immune Support", desc: "Quality supplements and vitamins to boost your immunity and support your overall wellbeing.", wa: "Hi, I'm looking for vitamins and immune boosters. What do you have?" },
+  { title: "Baby & Child Care", desc: "Trusted products and guidance for your little one's health, from infant care to childhood wellness.", wa: "Hi, I need baby/child care products. Can you advise?" },
+  { title: "General Health Products", desc: "Everyday health essentials including skincare, first aid supplies, and personal care items.", wa: "Hi, I'm looking for general health products. What do you recommend?" },
 ];
 
 const services = [
@@ -72,7 +74,7 @@ const Index = () => {
           <img
             src={logoFull}
             alt="Bakone Pharmacy"
-            className="mx-auto h-56 md:h-72 lg:h-80 drop-shadow-2xl animate-hero-logo"
+            className="mx-auto h-56 md:h-72 lg:h-80 drop-shadow-2xl animate-hero-logo animate-hero-pulse hover:scale-105 transition-transform duration-500"
             width={600}
             height={400}
           />
@@ -86,7 +88,7 @@ const Index = () => {
               </a>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <a href="tel:+27123456789">
+              <a href="tel:+27839982176">
                 <Phone size={18} className="mr-2" /> Call Now
               </a>
             </Button>
@@ -118,7 +120,7 @@ const Index = () => {
                   <p className="mt-2 text-sm text-muted-foreground">{item.desc}</p>
                 </div>
                 <Button asChild variant="outline" size="sm" className="mt-5 self-start border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors">
-                  <a href={`https://wa.me/27123456789?text=Hi%2C%20I'd%20like%20to%20ask%20about%20${encodeURIComponent(item.title)}`} target="_blank" rel="noopener noreferrer">
+                  <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(item.wa)}`} target="_blank" rel="noopener noreferrer">
                     <MessageCircle size={14} className="mr-1.5" /> Ask on WhatsApp
                   </a>
                 </Button>
@@ -250,7 +252,7 @@ const Index = () => {
                 <Phone className="mt-1 flex-shrink-0 text-primary" size={20} />
                 <div>
                   <h3 className="font-semibold">Phone</h3>
-                  <a href="tel:+27123456789" className="text-sm text-muted-foreground hover:text-primary transition-colors">+27 12 345 6789</a>
+                  <a href="tel:+27839982176" className="text-sm text-muted-foreground hover:text-primary transition-colors">+27 83 998 2176</a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
