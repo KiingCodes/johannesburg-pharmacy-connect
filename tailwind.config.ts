@@ -117,7 +117,7 @@ export default {
         "fade-in-up": "fade-in-up 0.7s ease-out forwards",
         "scale-in": "scale-in 0.5s ease-out forwards",
         "float": "float 3s ease-in-out infinite",
-        "hero-logo": "hero-logo 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards",
+        "hero-logo": "hero-logo 2s cubic-bezier(0.22, 1, 0.36, 1) infinite",
         "hero-pulse": "hero-pulse 2.5s ease-in-out infinite 1.5s",
       },
     },
