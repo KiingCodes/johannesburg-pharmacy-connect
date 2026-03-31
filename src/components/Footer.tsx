@@ -25,6 +25,7 @@ const Footer = () => (
         <div className="flex flex-col gap-2 text-sm text-muted-foreground">
           <h4 className="font-display text-base font-semibold text-foreground">Contact</h4>
           <p className="flex items-center gap-2"><Phone size={14} /> +27 83 998 2176</p>
+          <p className="flex items-center gap-2"><Phone size={14} /> +27 64 858 7838</p>
           <p className="flex items-center gap-2"><MapPin size={14} /> Amandla Blvd, Braamfischerville, Johannesburg, 1725</p>
         </div>
       </div>
