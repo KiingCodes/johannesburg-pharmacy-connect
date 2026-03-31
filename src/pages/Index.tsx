@@ -275,6 +275,10 @@ const Index = () => {
                 <Phone className="mt-1 flex-shrink-0 text-primary" size={20} />
                 <div>
                   <h3 className="font-semibold">Phone</h3>
+                  <a href="tel:+27839982176" className="text-sm text-muted-foreground hover:text-primary transition-colors block">+27 83 998 2176</a>
+                  <a href="tel:+27648587838" className="text-sm text-muted-foreground hover:text-primary transition-colors block">+27 64 858 7838</a>
+                </div>
+              </div>
                   <a href="tel:+27839982176" className="text-sm text-muted-foreground hover:text-primary transition-colors">+27 83 998 2176</a>
                 </div>
               </div>
