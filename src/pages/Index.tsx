@@ -4,6 +4,8 @@ import { useEffect, useRef } from "react";
 import logoFull from "@/assets/logo-full.png";
 import logoIcon from "@/assets/logo-icon.png";
 import aboutBg from "@/assets/about-bg.jpg";
+import shop1 from "@/assets/shop-1.jpg";
+import shop2 from "@/assets/shop-2.jpg";
 import SmartSearch from "@/components/SmartSearch";
 
 const WHATSAPP_NUMBER = "27839982176";
