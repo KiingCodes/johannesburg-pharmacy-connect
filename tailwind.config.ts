@@ -98,12 +98,12 @@ export default {
           "50%": { transform: "translateY(-8px)" },
         },
         "hero-logo": {
-          "0%": { opacity: "0", transform: "scale(0.5) translateY(40px)" },
-          "30%": { opacity: "1", transform: "scale(1.1) translateY(-10px)" },
-          "50%": { transform: "scale(0.95) translateY(5px)" },
-          "70%": { transform: "scale(1.03) translateY(-3px)" },
-          "85%": { transform: "scale(0.99) translateY(1px)" },
-          "100%": { opacity: "1", transform: "scale(1) translateY(0)" },
+          "0%, 100%": { transform: "scale(1) translateY(0)" },
+          "15%": { transform: "scale(1.08) translateY(-12px)" },
+          "30%": { transform: "scale(0.96) translateY(4px)" },
+          "45%": { transform: "scale(1.04) translateY(-6px)" },
+          "60%": { transform: "scale(0.98) translateY(2px)" },
+          "75%": { transform: "scale(1.02) translateY(-3px)" },
         },
         "hero-pulse": {
           "0%, 100%": { filter: "drop-shadow(0 0 0px hsl(145 63% 22% / 0))" },
