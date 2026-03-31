@@ -300,9 +300,9 @@ const Index = () => {
                 <div>
                   <h3 className="font-semibold">Business Hours</h3>
                   <div className="text-sm text-muted-foreground">
-                    <p>Mon – Fri: 08:00 – 18:00</p>
-                    <p>Saturday: 08:00 – 14:00</p>
-                    <p>Sunday & Public Holidays: Closed</p>
+                    <p>Mon – Fri: 8:00 AM – 6:30 PM</p>
+                    <p>Saturday: 8:00 AM – 6:00 PM</p>
+                    <p>Sunday & Public Holidays: 8:00 AM – 3:00 PM</p>
                   </div>
                 </div>
               </div>
