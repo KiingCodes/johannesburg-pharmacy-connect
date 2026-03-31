@@ -4,6 +4,8 @@ import { useEffect, useRef } from "react";
 import logoFull from "@/assets/logo-full.png";
 import logoIcon from "@/assets/logo-icon.png";
 import aboutBg from "@/assets/about-bg.jpg";
+import shop1 from "@/assets/shop-1.jpg";
+import shop2 from "@/assets/shop-2.jpg";
 import SmartSearch from "@/components/SmartSearch";
 
 const WHATSAPP_NUMBER = "27839982176";
@@ -242,6 +244,24 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Our Pharmacy Gallery */}
+      <section className="py-16 md:py-24 bg-muted/50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-center text-3xl font-bold md:text-4xl">Inside Our Pharmacy</h2>
+          <p className="mx-auto mt-3 max-w-lg text-center text-muted-foreground">
+            A glimpse into our well-stocked pharmacy — quality products ready for you.
+          </p>
+          <div className="mx-auto mt-12 grid max-w-4xl gap-6 md:grid-cols-2">
+            <div className="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <img src={shop1} alt="Bakone Pharmacy shelves stocked with cold & flu and pain relief medication" className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+            </div>
+            <div className="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <img src={shop2} alt="Bakone Pharmacy shelves with vitamins, allergy and general health products" className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact */}
       <section id="contact" className="py-16 md:py-24 bg-muted/50" ref={contactRef}>
         <div className="container mx-auto px-4">
@@ -255,7 +275,8 @@ const Index = () => {
                 <Phone className="mt-1 flex-shrink-0 text-primary" size={20} />
                 <div>
                   <h3 className="font-semibold">Phone</h3>
-                  <a href="tel:+27839982176" className="text-sm text-muted-foreground hover:text-primary transition-colors">+27 83 998 2176</a>
+                  <a href="tel:+27839982176" className="text-sm text-muted-foreground hover:text-primary transition-colors block">+27 83 998 2176</a>
+                  <a href="tel:+27648587838" className="text-sm text-muted-foreground hover:text-primary transition-colors block">+27 64 858 7838</a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
