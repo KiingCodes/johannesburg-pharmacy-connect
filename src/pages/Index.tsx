@@ -277,6 +277,7 @@ const Index = () => {
                   <h3 className="font-semibold">Phone</h3>
                   <a href="tel:+27839982176" className="text-sm text-muted-foreground hover:text-primary transition-colors block">+27 83 998 2176</a>
                   <a href="tel:+27648587838" className="text-sm text-muted-foreground hover:text-primary transition-colors block">+27 64 858 7838</a>
+                </div>
               </div>
               <div className="flex items-start gap-4">
                 <svg viewBox="0 0 32 32" className="mt-1 h-5 w-5 flex-shrink-0 fill-primary">
