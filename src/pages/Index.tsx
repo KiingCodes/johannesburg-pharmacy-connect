@@ -130,7 +130,7 @@ const Index = () => {
                 </div>
                 <Button asChild variant="outline" size="sm" className="mt-5 self-start border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors">
                   <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(item.wa)}`} target="_blank" rel="noopener noreferrer">
-                    <MessageCircle size={14} className="mr-1.5" /> Ask on WhatsApp
+                    <WhatsAppIcon className="mr-1.5 h-3.5 w-3.5 fill-current" /> Ask on WhatsApp
                   </a>
                 </Button>
               </div>
@@ -180,7 +180,7 @@ const Index = () => {
 
         <div className="relative z-10 container mx-auto px-4">
           <div className="mx-auto max-w-2xl text-center">
-            <img src={logoIcon} alt="Bakone Pharmacy" className="mx-auto h-20 w-20 scroll-reveal scroll-reveal-scale" />
+            <img src={logoIcon} alt="Bakone Pharmacy" className="mx-auto h-36 w-36 md:h-44 md:w-44 scroll-reveal scroll-reveal-scale" />
             <h2 className="mt-6 text-3xl font-bold text-primary-foreground md:text-4xl scroll-reveal scroll-reveal-fade">About Bakone Pharmacy</h2>
             <p className="mt-4 text-primary-foreground/80 scroll-reveal scroll-reveal-fade" style={{ transitionDelay: "0.15s" }}>
               Bakone Pharmacy is a community-focused pharmacy based in Johannesburg, South Africa. We are committed to providing professional, accessible, and compassionate pharmaceutical care to every person who walks through our doors.
