@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
-import { Search, MessageCircle, X } from "lucide-react";
+import { Search, X } from "lucide-react";
+import WhatsAppIcon from "./WhatsAppIcon";
 
 const WHATSAPP_NUMBER = "27839982176";
 
@@ -14,12 +15,47 @@ const searchData = [
   { keywords: ["skin", "skincare", "cream", "rash", "allergy"], title: "Skincare & Allergies", message: "Our pharmacists can recommend the best skincare and allergy relief products for your needs.", wa: "Hi, I need help with a skin/allergy issue." },
 ];
 
+const TYPE_WORDS = ["flu symptoms...", "headache relief...", "vitamins...", "baby care...", "blood pressure..."];
+
 const SmartSearch = () => {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<typeof searchData>([]);
   const [open, setOpen] = useState(false);
+  const [placeholder, setPlaceholder] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  // Typewriter effect for placeholder
+  useEffect(() => {
+    let wordIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
+    let timeout: ReturnType<typeof setTimeout>;
+    const tick = () => {
+      const word = TYPE_WORDS[wordIndex];
+      if (!deleting) {
+        charIndex++;
+        setPlaceholder("Search " + word.slice(0, charIndex));
+        if (charIndex === word.length) {
+          deleting = true;
+          timeout = setTimeout(tick, 1500);
+          return;
+        }
+      } else {
+        charIndex--;
+        setPlaceholder("Search " + word.slice(0, charIndex));
+        if (charIndex === 0) {
+          deleting = false;
+          wordIndex = (wordIndex + 1) % TYPE_WORDS.length;
+        }
+      }
+      timeout = setTimeout(tick, deleting ? 40 : 90);
+    };
+    tick();
+    return () => clearTimeout(timeout);
+  }, []);
+
+
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -56,7 +92,7 @@ const SmartSearch = () => {
           value={query}
           onChange={(e) => handleSearch(e.target.value)}
           onFocus={() => results.length > 0 && setOpen(true)}
-          placeholder="Search symptoms or products... e.g. flu, headache"
+          placeholder={placeholder || "Search symptoms or products..."}
           className="w-full rounded-full border border-gold/40 bg-card py-3 pl-10 pr-10 text-sm shadow-sm outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/20"
         />
         {query && (
@@ -81,7 +117,7 @@ const SmartSearch = () => {
                 rel="noopener noreferrer"
                 className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-primary px-3 py-1.5 text-xs font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
               >
-                <MessageCircle size={12} /> Chat on WhatsApp
+                <WhatsAppIcon className="h-3 w-3 fill-current" /> Chat on WhatsApp
               </a>
             </div>
           ))}

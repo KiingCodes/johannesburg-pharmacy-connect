@@ -11,7 +11,7 @@ const Footer = () => (
     <div className="container mx-auto px-4 py-10">
       <div className="grid gap-8 md:grid-cols-3">
         <div className="flex flex-col gap-3">
-          <img src={logoIcon} alt="Bakone Pharmacy" className="h-10 w-10" />
+          <img src={logoIcon} alt="Bakone Pharmacy" className="h-20 w-20" />
           <p className="text-sm text-muted-foreground">Your Partner in Wellness</p>
         </div>
 
@@ -35,7 +35,7 @@ const Footer = () => (
         <div className="mt-3 flex items-center justify-center gap-2">
           <span>Site managed by</span>
           <a href="https://www.jeweliq.tech" target="_blank" rel="noopener noreferrer" className="inline-flex items-center hover:opacity-80 transition-opacity">
-            <img src={jeweliqLogo} alt="JewelIQ" className="h-12" />
+            <img src={jeweliqLogo} alt="JewelIQ" className="h-20" />
           </a>
         </div>
       </div>

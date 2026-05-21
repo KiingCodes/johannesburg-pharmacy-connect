@@ -4,9 +4,11 @@ import { useEffect, useRef } from "react";
 import logoFull from "@/assets/logo-full.png";
 import logoIcon from "@/assets/logo-icon.png";
 import aboutBg from "@/assets/about-bg.jpg";
+import heroBg from "@/assets/hero-bg.jpg";
 import shop1 from "@/assets/shop-1.jpg";
 import shop2 from "@/assets/shop-2.jpg";
 import SmartSearch from "@/components/SmartSearch";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 const WHATSAPP_NUMBER = "27839982176";
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=Hi%20Bakone%20Pharmacy%2C%20I'd%20like%20to%20enquire%20about%20your%20services.`;
@@ -71,22 +73,24 @@ const Index = () => {
   return (
     <>
       {/* Hero */}
-      <section id="home" className="relative flex min-h-[85vh] items-center justify-center overflow-hidden bg-background">
+      <section id="home" className="relative flex min-h-[85vh] items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${heroBg})` }} />
+        <div className="absolute inset-0 bg-background/70 backdrop-blur-[2px]" />
         <div className="relative z-10 container mx-auto px-4 text-center">
           <img
             src={logoFull}
             alt="Bakone Pharmacy"
-            className="mx-auto h-56 md:h-72 lg:h-80 drop-shadow-2xl animate-hero-logo animate-hero-pulse hover:scale-105 transition-transform duration-500"
+            className="mx-auto h-56 md:h-72 lg:h-80 drop-shadow-2xl"
             width={600}
             height={400}
           />
-          <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground animate-fade-in-up opacity-0" style={{ animationDelay: "0.5s" }}>
+          <p className="mx-auto mt-6 max-w-xl text-lg text-foreground/80 animate-fade-in-up opacity-0" style={{ animationDelay: "0.5s" }}>
             Professional pharmaceutical care with a personal touch. We're here to help you and your family stay healthy, every day.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4 animate-fade-in-up opacity-0" style={{ animationDelay: "0.7s" }}>
             <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg">
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                <MessageCircle size={18} className="mr-2" /> Chat on WhatsApp
+                <WhatsAppIcon className="mr-2 h-[18px] w-[18px] fill-current" /> Chat on WhatsApp
               </a>
             </Button>
             <Button asChild size="lg" variant="outline">
@@ -126,7 +130,7 @@ const Index = () => {
                 </div>
                 <Button asChild variant="outline" size="sm" className="mt-5 self-start border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors">
                   <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(item.wa)}`} target="_blank" rel="noopener noreferrer">
-                    <MessageCircle size={14} className="mr-1.5" /> Ask on WhatsApp
+                    <WhatsAppIcon className="mr-1.5 h-3.5 w-3.5 fill-current" /> Ask on WhatsApp
                   </a>
                 </Button>
               </div>
@@ -176,7 +180,7 @@ const Index = () => {
 
         <div className="relative z-10 container mx-auto px-4">
           <div className="mx-auto max-w-2xl text-center">
-            <img src={logoIcon} alt="Bakone Pharmacy" className="mx-auto h-20 w-20 scroll-reveal scroll-reveal-scale" />
+            <img src={logoIcon} alt="Bakone Pharmacy" className="mx-auto h-36 w-36 md:h-44 md:w-44 scroll-reveal scroll-reveal-scale" />
             <h2 className="mt-6 text-3xl font-bold text-primary-foreground md:text-4xl scroll-reveal scroll-reveal-fade">About Bakone Pharmacy</h2>
             <p className="mt-4 text-primary-foreground/80 scroll-reveal scroll-reveal-fade" style={{ transitionDelay: "0.15s" }}>
               Bakone Pharmacy is a community-focused pharmacy based in Johannesburg, South Africa. We are committed to providing professional, accessible, and compassionate pharmaceutical care to every person who walks through our doors.
@@ -280,9 +284,7 @@ const Index = () => {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <svg viewBox="0 0 32 32" className="mt-1 h-5 w-5 flex-shrink-0 fill-primary">
-                  <path d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.498 1.132 6.738 3.054 9.372L1.054 31.2l6.072-1.946A15.932 15.932 0 0016.004 32C24.826 32 32 24.826 32 16.004 32 7.176 24.826 0 16.004 0zm9.31 22.606c-.39 1.098-1.932 2.01-3.162 2.276-.842.18-1.94.322-5.638-1.212-4.734-1.962-7.78-6.766-8.016-7.08-.226-.314-1.9-2.53-1.9-4.826s1.202-3.428 1.63-3.896c.39-.426.852-.534 1.136-.534.282 0 .566.002.812.016.262.012.612-.1.958.73.356.852 1.212 2.95 1.318 3.164.108.214.18.466.036.75-.142.29-.214.468-.428.72-.214.252-.45.562-.642.754-.214.214-.436.446-.188.874.248.428 1.102 1.818 2.368 2.946 1.628 1.452 3 1.902 3.428 2.116.428.214.678.18.926-.108.248-.29 1.068-1.244 1.354-1.672.282-.428.566-.356.958-.214.39.142 2.486 1.174 2.914 1.388.428.214.714.322.822.498.106.178.106 1.028-.284 2.126z"/>
-                </svg>
+                <WhatsAppIcon className="mt-1 h-5 w-5 flex-shrink-0 fill-primary" />
                 <div>
                   <h3 className="font-semibold">WhatsApp</h3>
                   <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors">Send us a message</a>
@@ -308,7 +310,7 @@ const Index = () => {
               </div>
               <Button asChild size="lg" className="mt-2 bg-primary text-primary-foreground hover:bg-primary/90">
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                  <MessageCircle size={18} className="mr-2" /> Chat on WhatsApp
+                  <WhatsAppIcon className="mr-2 h-[18px] w-[18px] fill-current" /> Chat on WhatsApp
                 </a>
               </Button>
             </div>
