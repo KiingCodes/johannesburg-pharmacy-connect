@@ -75,7 +75,7 @@ const Index = () => {
       {/* Hero */}
       <section id="home" className="relative flex min-h-[85vh] items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${heroBg})` }} />
-        <div className="absolute inset-0 bg-background/70 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-background/40" />
         <div className="relative z-10 container mx-auto px-4 text-center">
           <img
             src={logoFull}
@@ -176,7 +176,7 @@ const Index = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${aboutBg})` }}
         />
-        <div className="absolute inset-0 bg-green-dark/85 backdrop-blur-sm" />
+        <div className="absolute inset-0 bg-green-dark/85" />
 
         <div className="relative z-10 container mx-auto px-4">
           <div className="mx-auto max-w-2xl text-center">
@@ -195,7 +195,7 @@ const Index = () => {
 
           {/* Vision & Mission */}
           <div className="mx-auto mt-14 grid max-w-4xl gap-8 md:grid-cols-2">
-            <div className="scroll-reveal scroll-reveal-up rounded-lg border border-gold/30 bg-card/10 backdrop-blur-sm p-8" style={{ transitionDelay: "0.1s" }}>
+            <div className="scroll-reveal scroll-reveal-up rounded-lg border border-gold/30 bg-card/10 p-8" style={{ transitionDelay: "0.1s" }}>
               <div className="flex items-center gap-3 mb-4">
                 <div className="flex h-11 w-11 items-center justify-center rounded-full bg-gold/20">
                   <Eye className="text-gold-light" size={22} />
@@ -206,7 +206,7 @@ const Index = () => {
                 To be Johannesburg's most trusted community pharmacy — a place where every person feels welcome, heard, and empowered to take control of their health.
               </p>
             </div>
-            <div className="scroll-reveal scroll-reveal-up rounded-lg border border-gold/30 bg-card/10 backdrop-blur-sm p-8" style={{ transitionDelay: "0.25s" }}>
+            <div className="scroll-reveal scroll-reveal-up rounded-lg border border-gold/30 bg-card/10 p-8" style={{ transitionDelay: "0.25s" }}>
               <div className="flex items-center gap-3 mb-4">
                 <div className="flex h-11 w-11 items-center justify-center rounded-full bg-gold/20">
                   <Target className="text-gold-light" size={22} />
