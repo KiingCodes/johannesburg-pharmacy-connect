@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logoFull from "@/assets/logo-full.png";
 
 const links = [
   { to: "#home", label: "Home" },
@@ -21,8 +20,8 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 border-b bg-card/80 backdrop-blur-md">
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
-        <a href="#home" onClick={() => scrollTo("#home")} className="flex-shrink-0">
-          <img src={logoFull} alt="Bakone Pharmacy" className="h-12" />
+        <a href="#home" onClick={() => scrollTo("#home")} className="font-display text-lg font-semibold text-primary">
+          Bakone Pharmacy
         </a>
 
         {/* Desktop */}
