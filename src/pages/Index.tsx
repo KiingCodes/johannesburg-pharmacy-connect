@@ -195,7 +195,7 @@ const Index = () => {
 
           {/* Vision & Mission */}
           <div className="mx-auto mt-14 grid max-w-4xl gap-8 md:grid-cols-2">
-            <div className="scroll-reveal scroll-reveal-up rounded-lg border border-gold/30 bg-card/10 backdrop-blur-sm p-8" style={{ transitionDelay: "0.1s" }}>
+            <div className="scroll-reveal scroll-reveal-up rounded-lg border border-gold/30 bg-card/10 p-8" style={{ transitionDelay: "0.1s" }}>
               <div className="flex items-center gap-3 mb-4">
                 <div className="flex h-11 w-11 items-center justify-center rounded-full bg-gold/20">
                   <Eye className="text-gold-light" size={22} />
