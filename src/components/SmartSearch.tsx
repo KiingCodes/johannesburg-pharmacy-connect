@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
-import { Search, MessageCircle, X } from "lucide-react";
+import { Search, X } from "lucide-react";
+import WhatsAppIcon from "./WhatsAppIcon";
 
 const WHATSAPP_NUMBER = "27839982176";
 
@@ -81,7 +82,7 @@ const SmartSearch = () => {
                 rel="noopener noreferrer"
                 className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-primary px-3 py-1.5 text-xs font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
               >
-                <MessageCircle size={12} /> Chat on WhatsApp
+                <WhatsAppIcon className="h-3 w-3 fill-current" /> Chat on WhatsApp
               </a>
             </div>
           ))}
