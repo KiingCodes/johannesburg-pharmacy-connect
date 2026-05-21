@@ -1,14 +1,17 @@
 import { Phone, MapPin } from "lucide-react";
 import logoIcon from "@/assets/logo-icon.png";
 import jeweliqLogo from "@/assets/jeweliq-logo.png";
+import footerBg from "@/assets/footer-bg.jpg";
 
 const scrollTo = (id: string) => {
   document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
 };
 
 const Footer = () => (
-  <footer className="border-t bg-card">
-    <div className="container mx-auto px-4 py-10">
+  <footer className="relative border-t overflow-hidden">
+    <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${footerBg})` }} />
+    <div className="absolute inset-0 bg-card/85" />
+    <div className="relative z-10 container mx-auto px-4 py-10">
       <div className="grid gap-8 md:grid-cols-3">
         <div className="flex flex-col gap-3">
           <img src={logoIcon} alt="Bakone Pharmacy" className="h-20 w-20" />
