@@ -54,7 +54,8 @@ const SmartSearch = () => {
     tick();
     return () => clearTimeout(timeout);
   }, []);
-  const containerRef = useRef<HTMLDivElement>(null);
+
+
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
