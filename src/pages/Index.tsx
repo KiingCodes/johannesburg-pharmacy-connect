@@ -176,7 +176,7 @@ const Index = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${aboutBg})` }}
         />
-        <div className="absolute inset-0 bg-green-dark/85 backdrop-blur-sm" />
+        <div className="absolute inset-0 bg-green-dark/85" />
 
         <div className="relative z-10 container mx-auto px-4">
           <div className="mx-auto max-w-2xl text-center">
