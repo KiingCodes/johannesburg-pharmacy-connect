@@ -206,7 +206,7 @@ const Index = () => {
                 To be Johannesburg's most trusted community pharmacy — a place where every person feels welcome, heard, and empowered to take control of their health.
               </p>
             </div>
-            <div className="scroll-reveal scroll-reveal-up rounded-lg border border-gold/30 bg-card/10 backdrop-blur-sm p-8" style={{ transitionDelay: "0.25s" }}>
+            <div className="scroll-reveal scroll-reveal-up rounded-lg border border-gold/30 bg-card/10 p-8" style={{ transitionDelay: "0.25s" }}>
               <div className="flex items-center gap-3 mb-4">
                 <div className="flex h-11 w-11 items-center justify-center rounded-full bg-gold/20">
                   <Target className="text-gold-light" size={22} />
