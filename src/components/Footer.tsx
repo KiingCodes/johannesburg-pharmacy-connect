@@ -12,20 +12,19 @@ const Footer = () => (
     <div className="absolute inset-0 bg-[length:100%_auto] md:bg-cover bg-top md:bg-center bg-no-repeat" style={{ backgroundImage: `url(${footerBg})` }} />
     <div className="absolute inset-0 bg-card/30" />
     <div className="relative z-10 container mx-auto px-4 py-10">
-      <div className="grid gap-8 md:grid-cols-3">
-        <div className="flex flex-col gap-3">
+      <div className="grid gap-8 md:grid-cols-3 md:items-start">
+        <div className="flex flex-col items-center text-center gap-3 md:order-2">
           <img src={logoIcon} alt="Bakone Pharmacy" className="h-20 w-20" />
           <p className="text-sm text-muted-foreground">Your Partner in Wellness</p>
+          <h4 className="font-display text-base font-semibold text-foreground mt-2">Quick Links</h4>
+          <div className="flex flex-col gap-2 text-sm text-muted-foreground">
+            <a href="#services" onClick={(e) => { e.preventDefault(); scrollTo("#services"); }} className="hover:text-primary transition-colors">Services</a>
+            <a href="#about" onClick={(e) => { e.preventDefault(); scrollTo("#about"); }} className="hover:text-primary transition-colors">About Us</a>
+            <a href="#contact" onClick={(e) => { e.preventDefault(); scrollTo("#contact"); }} className="hover:text-primary transition-colors">Contact</a>
+          </div>
         </div>
 
-        <div className="flex flex-col gap-2 text-sm text-muted-foreground">
-          <h4 className="font-display text-base font-semibold text-foreground">Quick Links</h4>
-          <a href="#services" onClick={(e) => { e.preventDefault(); scrollTo("#services"); }} className="hover:text-primary transition-colors">Services</a>
-          <a href="#about" onClick={(e) => { e.preventDefault(); scrollTo("#about"); }} className="hover:text-primary transition-colors">About Us</a>
-          <a href="#contact" onClick={(e) => { e.preventDefault(); scrollTo("#contact"); }} className="hover:text-primary transition-colors">Contact</a>
-        </div>
-
-        <div className="flex flex-col gap-2 text-sm text-muted-foreground">
+        <div className="flex flex-col gap-2 text-sm text-muted-foreground md:order-1">
           <h4 className="font-display text-base font-semibold text-foreground">Contact</h4>
           <p className="flex items-center gap-2"><Phone size={14} /> +27 83 998 2176</p>
           <p className="flex items-center gap-2"><Phone size={14} /> +27 64 858 7838</p>
