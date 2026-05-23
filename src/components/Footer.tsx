@@ -9,8 +9,8 @@ const scrollTo = (id: string) => {
 
 const Footer = () => (
   <footer className="relative border-t overflow-hidden">
-    <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${footerBg})` }} />
-    <div className="absolute inset-0 bg-card/85" />
+    <div className="absolute inset-0 bg-[length:100%_auto] md:bg-cover bg-top md:bg-center bg-no-repeat" style={{ backgroundImage: `url(${footerBg})` }} />
+    <div className="absolute inset-0 bg-card/30" />
     <div className="relative z-10 container mx-auto px-4 py-10">
       <div className="grid gap-8 md:grid-cols-3">
         <div className="flex flex-col gap-3">
