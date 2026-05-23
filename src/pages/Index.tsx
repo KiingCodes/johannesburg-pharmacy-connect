@@ -173,7 +173,7 @@ const Index = () => {
         ref={aboutRef}
       >
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-[length:auto_100%] md:bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${aboutBg})` }}
         />
         <div className="absolute inset-0 bg-green-dark/85" />
