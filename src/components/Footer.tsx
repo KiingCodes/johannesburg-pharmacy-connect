@@ -30,6 +30,8 @@ const Footer = () => (
           <p className="flex items-center gap-2"><Phone size={14} /> +27 64 858 7838</p>
           <p className="flex items-center gap-2"><MapPin size={14} /> Amandla Blvd, Braamfischerville, Johannesburg, 1725</p>
         </div>
+
+        <div className="hidden md:block md:order-3" />
       </div>
 
       <div className="mt-8 border-t pt-6 text-center text-xs text-muted-foreground">
