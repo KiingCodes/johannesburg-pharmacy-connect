@@ -20,8 +20,8 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 border-b bg-card/80 backdrop-blur-md">
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
-        <a href="#home" onClick={() => scrollTo("#home")} className="font-display text-lg font-semibold text-primary">
-          Bakone Pharmacy
+        <a href="#home" onClick={() => scrollTo("#home")} className="font-display text-lg font-semibold">
+          <span className="text-gold">Bakone</span> <span className="text-primary">Pharmacy</span>
         </a>
 
         {/* Desktop */}
